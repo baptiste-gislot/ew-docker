@@ -22,9 +22,6 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: user/app:latest
-          build-args: |
-            arg1=value1
-            arg2=value2
+          tags: bgslt/ew-docker:latest
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
