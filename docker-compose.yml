@@ -1,0 +1,11 @@
+services:
+  my-app:
+    build: .
+    ports:
+      - 4000:3000
+    depends_on: 
+      - mongodb
+      environment: 
+        - SUPER_SECRET=toto
+  mongodb:
+    image: mongo:latest
